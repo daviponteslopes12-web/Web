@@ -1,7 +1,7 @@
-CREATE DATABASE IF NOT EXISTS mural;
-USE mural;
+CREATE DATABASE IF NOT EXISTS mural_recados;
+USE mural_recados;
 
-CREATE TABLE IF NOT EXISTS atividades (
+CREATE TABLE IF NOT EXISTS recados (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(255) NOT NULL,
     descricao VARCHAR(255),
