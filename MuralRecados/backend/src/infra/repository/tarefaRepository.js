@@ -37,7 +37,7 @@ export class TarefaRepository {
         const [resultado] = await db.query(`
             SELECT * FROM tarefas
             WHERE titulo = ?
-            ` [titulo]);
+            `, [titulo]);
 
         return resultado[0] || null;
     } catch (erro) {
@@ -50,7 +50,7 @@ export class TarefaRepository {
         const [resultado] = await db.query(`
             SELECT * FROM tarefas
             WHERE id = ?
-            ` [id]);
+            `, [id]);
 
         return resultado[0] || null;
     } catch (erro) {
