@@ -45,6 +45,19 @@ export class TarefaRepository {
     }
   }
 
+  async buscarTarefaPorId(id) {
+    try {
+        const [resultado] = await db.query(`
+            SELECT * FROM tarefas
+            WHERE id = ?
+            ` [id]);
+
+        return resultado[0] || null;
+    } catch (erro) {
+        throw criarErro("Ocorreu um erro, tente novamente mais tarde", 500, erro);
+    }
+  }
+
   async deletarTarefa(id) {
     try {
       const [resultado] = await db.query(
