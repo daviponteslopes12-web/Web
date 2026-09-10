@@ -1,15 +1,15 @@
 import { 
-    ContainerBarraCriarTarefa,
+    ContainerNavbar,
     Title,
 } from './style.js';
 
 const Navbar = () => {
 
     return (
-        <ContainerBarraCriarTarefa>
+        <ContainerNavbar>
             <Title>Mural de Tarefas</Title>
             
-        </ContainerBarraCriarTarefa>
+        </ContainerNavbar>
     )
 }
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerBarraCriarTarefa = styled.div`
+export const ContainerNavbar = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
