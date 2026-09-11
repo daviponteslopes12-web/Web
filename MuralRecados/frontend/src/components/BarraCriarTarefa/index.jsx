@@ -6,7 +6,7 @@ import {
 } from "./style.js";
 import { criarTarefa } from "../../services/tarefaService.js";
 
-const BarraCriarTarefa = ({ novaTarefa, setNovaTarefa }) => {
+const BarraCriarTarefa = ({ novaTarefa, setNovaTarefa, adicionarTarefaNaLista }) => {
 
     const atualizarCampo = (campo, valor) => {
         setNovaTarefa({
@@ -17,9 +17,16 @@ const BarraCriarTarefa = ({ novaTarefa, setNovaTarefa }) => {
 
     const adicionarTarefa = async () => {
         try {
-            const resposta = await criarTarefa(novaTarefa);
+            const tarefaCriada = await criarTarefa(novaTarefa);
 
-            console.log(resposta);
+            adicionarTarefaNaLista(tarefaCriada);
+
+            setNovaTarefa({
+                titulo: "",
+                descricao: "",
+                status: "em espera"
+            });
+
         } catch (erro) {
             console.error(erro)
         }
@@ -47,10 +54,10 @@ const BarraCriarTarefa = ({ novaTarefa, setNovaTarefa }) => {
             />
 
             <Select
-            value={novaTarefa.status}
-            onChange={(evento) => 
-                atualizarCampo("status", evento.target.value)
-            }
+                value={novaTarefa.status}
+                onChange={(evento) => 
+                    atualizarCampo("status", evento.target.value)
+                }
             >
                 <option value="em espera">Em espera</option>
                 <option value="em andamento">Em andamento</option>

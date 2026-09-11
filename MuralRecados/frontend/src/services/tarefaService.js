@@ -5,3 +5,9 @@ export const criarTarefa = async (tarefa) => {
 
     return resposta.data;
 }
+
+export const buscarTarefas = async () => {
+    const resposta = await api.get("/tarefas");
+
+    return resposta.data;
+}
