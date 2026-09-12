@@ -1,0 +1,156 @@
+:root {
+    --shadow: 5px 5px 5px #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #010775, #018697);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/*=== HEADER ===*/
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #333;
+    color: #f2f2f2;
+    padding: 1rem;
+    border-bottom: 4px solid #000;
+}
+
+.header img {
+    width: 80px;
+    border: 2px solid #000;
+    background-color: #8d8888;
+    border-radius: 30px;
+}
+
+.nav ul {
+    display: flex;
+    gap: 4rem;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav a {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+
+/*=== MAIN ===*/
+
+.formSection {
+
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.formSection h2 {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+.formulario {
+    width: 30%;
+    min-height: 200px;
+    margin: 2rem auto;
+
+    padding: 1rem;
+    
+    color: #fff;
+    border-radius: 5px;
+    background-color: #444;
+    box-shadow: var(--shadow);
+}
+
+.formulario input {
+    padding: 0.5rem;
+    border: none;
+    margin: 0.5rem;
+    border-radius: 10px;
+    max-width: 50%;
+    
+}
+
+.formulario input:focus {
+    outline: 4px solid #2811d0;
+}
+
+.formulario button {
+    padding: 0.8rem;
+    background-color: #c6c4c4;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.formulario button:hover {
+    background-color: #dfdbdb;
+    transform: scale(1.08);
+}
+
+.cardArticle {
+    border: 1px solid #000;
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    width: 30%;
+    background-color: #989494;
+}
+
+.cardArticle h3 {
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+.listaUl {
+    list-style: none;
+}
+
+.tarefaLi {
+    border: 1px solid #000;
+    margin: 1rem;
+    background-color: #e5dede;
+    padding: 0.5rem;
+    border-radius: 10px;
+    text-align: start;
+    font-weight: bold;
+}
+
+
+/*=== FOOTER ===*/
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 100px;
+}

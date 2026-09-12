@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Tarefas</title>
+    <link rel="icon" href="./assets/faviconTodoList.jpeg" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <img src="./assets/logoTodoList.png" alt="Logo de tarefas" />
+        <h1>Todo-List</h1>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formSection" id="formSection">
+            <h2>✨ Sua Lista de Tarefas ✨</h2>
+            <form class="formulario" id="formulario">
+                <label for="tarefa"></label><br>
+
+                <input 
+                type="text" 
+                id="tarefa"
+                placeholder="Estudar..." 
+                required 
+                />
+
+                <button type="submit">Cadastrar</button>
+            </form>
+            
+            <article class="cardArticle" id="cardArticle">
+                <h3>Tarefas</h3>
+                <ul class="listaUl" id="listaUl">
+
+
+
+                </ul>
+
+                
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&COPY; PROJETO - LISTA DE TAREFAS</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
