@@ -1,5 +1,6 @@
 import "dotenv/config";
 
+// Recebe variáveis do .env e armazena em outras variáveis para usar no sistema
 export const port = process.env.PORT;
 export const db_port = Number(process.env.DB_PORT);
 export const db_host = process.env.DB_HOST!;

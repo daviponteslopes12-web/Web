@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { port } from "./config/configs.js";
-import { pool } from "./infra/database/connection.js";
+import { pool } from "./database/connection.js";
 import produtoRoutes from "./routes/produto.routes.js";
 
 const app = express();
@@ -13,7 +13,7 @@ app.use("/produtos", produtoRoutes);
 
 
 
-const testarConexao = async () => {
+const testarConexao = async (): Promise<void> => {
 
     try {
 
