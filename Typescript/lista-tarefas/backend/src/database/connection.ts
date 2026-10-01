@@ -11,5 +11,4 @@ export async function conectarBanco() {
     });
 
     return conn;
-    
 }
