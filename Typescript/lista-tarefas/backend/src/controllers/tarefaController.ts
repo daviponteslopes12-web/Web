@@ -90,7 +90,10 @@ export async function deletar(req: Request, res: Response) {
             });
         }
 
-        res.status(200).json(deletou);
+        res.status(200).json({
+            sucesso: deletou,
+            mensagem: "Tarefa deletada com sucesso"
+        });
 
     } catch (error) {
         console.error("[ERRO] - tarefaController", error);
@@ -131,7 +134,11 @@ export async function atualizar(req: Request, res: Response) {
             });
         }
 
-        return res.status(200).json(atualizou);
+        return res.status(200).json({ 
+            sucesso: atualizou,
+            mensagem: "Tarefa atualizada com sucesso"
+            
+        });
 
     } catch (error) {
         console.error("[ERRO] - tarefaController:", error);
