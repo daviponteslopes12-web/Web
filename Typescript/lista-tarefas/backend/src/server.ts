@@ -1,10 +1,12 @@
 import express from "express";
+import cors from "cors";
 import { conectarBanco } from "./database/connection.js";
 import tarefaRoutes from "./routes/tarefaRoutes.js";
 
 // Config. do express
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 
 
